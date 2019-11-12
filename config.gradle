@@ -1,0 +1,50 @@
+ext {
+    //是否是Application
+    isMode = false
+
+    //Android项目配置
+    android = [
+            compileSdkVersion        : 29,
+            minSdkVersion            : 21,
+            targetSdkVersion         : 29,
+            versionCode              : 3,
+            versionName              : "1.0.2",
+            buildToolsVersion        : "29.0.2",
+            applicationId            : "com.bryce.cui.component",
+            testInstrumentationRunner: "androidx.test.runner.AndroidJUnitRunner"
+    ]
+
+    //三方库版本号管理
+    vsersions = [
+            kotlinPlugin    : "1.3.50",
+            appcompat       : "1.1.0",
+            coreKtx         : "1.1.0",
+            constraintLayout: "1.1.3",
+            junit           : "4.12",
+            testJunit       : "1.1.1",
+            testEspressoCore: "3.2.0"
+    ]
+
+
+    //三方库
+    dependencies = [
+            kotlinPlugin    :
+                    "org.jetbrains.kotlin:kotlin-gradle-plugin:${vsersions.kotlinPlugin}",
+            kotlinJdk       :
+                    "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${vsersions.kotlinJdk}",
+            appcompat       :
+                    "androidx.appcompat:appcompat:${vsersions.appcompat}",
+            coreKtx         :
+                    "androidx.core:core-ktx:${vsersions.coreKtx}",
+            constraintLayout:
+                    "androidx.constraintlayout:constraintlayout:${vsersions.constraintLayout}",
+            junit           :
+                    "junit:junit:${vsersions.junit}",
+            testJunit       :
+                    "androidx.test.ext:junit:${vsersions.testJunit}",
+            testEspressoCore:
+                    "androidx.test.espresso:espresso-core:${vsersions.testEspressoCore}"
+
+    ]
+
+}
